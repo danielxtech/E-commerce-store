@@ -45,12 +45,12 @@ function App() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "20px"}} >
       <h1 style={{fontFamily:"c",fontSize:"50px"}}>📦 Product Management</h1>
 
       {editingProduct ? (
         <>
-          <h2 style={{fontFamily:"c", fontSize:"30px"}}>Edit Product</h2>
+          <h2 style={{ transform: "hovered" ? "scale(1.2)" : "scale(1)", transition: "transform 0.6s ease" ,fontFamily:"c", fontSize:"30px"}}>Edit Product</h2>
           <ProductForm
             onSubmit={handleUpdate}
             initialData={editingProduct}
@@ -59,12 +59,11 @@ function App() {
         </>
       ) : (
         <>
-          <h2 style={{fontFamily:"c",fontSize:"30px"}}>Add Product</h2>
-          <ProductForm onSubmit={handleAdd} buttonText="Add" />
-        </>
+          <h2 style={{fontFamily:"c",fontSize:"30px" }}>Add Product</h2>
+          <em style={{color:"#001affff"}}><ProductForm onSubmit={handleAdd} buttonText="Add" /></em></>
       )}
 
-      <h2 style={{fontFamily:"c",fontSize:"30px"}}>Product List</h2>
+      <h2 style={{ fontFamily:"c",fontSize:"30px"}}>Product List</h2>
       <ProductList
         products={products}
         onDelete={handleDelete}
