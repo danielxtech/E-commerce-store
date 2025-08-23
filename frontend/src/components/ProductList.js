@@ -42,7 +42,8 @@ function HoverCard({ product, onEdit, onDelete }) {
       onMouseLeave={() => setHovered(false)}
     >
       <img
-        src={`http://localhost:5000${product.image}`}
+        //src={`http://localhost:5000${product.image}`}
+        src={product.image ? `http://localhost:5000${product.image}` : "https://via.placeholder.com/300x150?text=No+Image"}
         alt={product.name}
         style={{ width: "100%", height: "150px", objectFit: "scale-down" }}
       />
