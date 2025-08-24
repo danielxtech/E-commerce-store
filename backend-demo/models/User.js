@@ -8,7 +8,6 @@ const userSchema = new mongoose.Schema({
   role:     { type: String, enum: ["user", "admin"], default: "user" }
 }, { timestamps: true });
 
-userSchema.index({ username: 1 }, { unique: true });
-userSchema.index({ email: 1 }, { unique: true });
+
 
 module.exports = mongoose.model("User", userSchema);
