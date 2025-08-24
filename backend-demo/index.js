@@ -38,7 +38,7 @@ app.use("/uploads", express.static("uploads"));
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('✅ MongoDB Connected'))
-  .catch(err => console.error(err));
+  .catch(err => console.error("DB connection error:",err));
 
 // Routes
 
