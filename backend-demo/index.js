@@ -94,6 +94,7 @@ app.post('/signup', async (req, res) => {
 app.post('/login', async (req, res) => {
   try {
     const { usernameOrEmail, password } = req.body;
+    console.log("Login request:", usernameOrEmail, password);
     if (!usernameOrEmail || !password) return res.status(400).json({ message: "Missing fields" });
 
     const user = await User.findOne({
