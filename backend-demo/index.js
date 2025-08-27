@@ -50,15 +50,6 @@ app.get('/products', async (req, res) => {
 
 // POST a product with image upload
 app.post('/products',auth("admin"), upload.single("image"), async (req, res) => {
-  const { name, price } = req.body;
-  const image = req.file ? `/uploads/${req.file.filename}` : null;
-
-  const product = new Product({ name, price, image });
-  await product.save();
-  res.status(201).json(product);
-});
-
-app.post('/products',auth("admin"), upload.single("image"), async (req, res) => {
   try {
     const { name, price } = req.body;
     const image = req.file ? `/uploads/${req.file.filename}` : null; // ← fix with backticks
