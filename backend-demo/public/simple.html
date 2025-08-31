@@ -1,3 +1,4 @@
+// backend-demo/public/simple.html
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +23,7 @@
           div.className = "card";
           div.innerHTML = `
             <strong>${p.name}</strong> — $${p.price}<br/>
-            ${p.image ? `<img src="${p.image}" width="200">` : ""}
+            ${p.image ? `<img src="${p.image}" width="200">` : "null"}
           `;
           list.appendChild(div);
         });
