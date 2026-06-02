@@ -37,3 +37,17 @@ Admins can add, update, and delete products (with image uploads), while normal u
 - MongoDB + Mongoose
 - Multer (file uploads)
 - JWT + bcrypt (auth & security)
+
+---
+
+## ⚙️ Steps to Run the Project
+
+You need to run **two terminals** at the same time.
+
+---
+
+# 🖥️ Terminal 1 — Frontend
+
+```bash
+cd frontend
+npm start
