@@ -44,10 +44,15 @@ Admins can add, update, and delete products (with image uploads), while normal u
 
 You need to run **two terminals** at the same time.
 
----
-
-# 🖥️ Terminal 1 — Frontend
-
 ```bash
+
+🖥️ Terminal 1 — Backend
+
+cd backend-demo
+node index.js
+
+
+🖥️ Terminal 2 — Frontend
+
 cd frontend
 npm start
